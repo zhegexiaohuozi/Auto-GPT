@@ -1,39 +1,51 @@
-## Run tests
+# Running tests
 
-To run all tests, run the following command:
+To run all tests, use the following command:
 
+```shell
+pytest
 ```
-pytest 
+
+If `pytest` is not found:
+
+```shell
+python -m pytest
 ```
 
-To run just without integration tests:
+### Running specific test suites
 
-```
+- To run without integration tests:
+
+```shell
 pytest --without-integration
 ```
 
-To run just without slow integration tests:
+- To run without *slow* integration tests:
 
-```
+```shell
 pytest --without-slow-integration
 ```
 
-To run tests and see coverage, run the following command:
+- To run tests and see coverage:
 
-```
+```shell
 pytest --cov=autogpt --without-integration --without-slow-integration
 ```
 
-## Run linter
+## Running the linter
 
-This project uses [flake8](https://flake8.pycqa.org/en/latest/) for linting. We currently use the following rules: `E303,W293,W291,W292,E305,E231,E302`. See the [flake8 rules](https://www.flake8rules.com/) for more information.
+This project uses [flake8](https://flake8.pycqa.org/en/latest/) for linting.
+We currently use the following rules: `E303,W293,W291,W292,E305,E231,E302`.
+See the [flake8 rules](https://www.flake8rules.com/) for more information.
 
-To run the linter, run the following command:
+To run the linter:
 
+```shell
+flake8 .
 ```
-flake8 autogpt/ tests/
 
-# Or, if you want to run flake8 with the same configuration as the CI:
+Or:
 
-flake8 autogpt/ tests/ --select E303,W293,W291,W292,E305,E231,E302
+```shell
+python -m flake8 .
 ```

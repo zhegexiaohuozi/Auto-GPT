@@ -1,9 +1,21 @@
-Welcome to Auto-GPT! We'll keep you informed of the latest news and features by printing messages here.
-If you don't wish to see this message, you can run Auto-GPT with the --skip-news flag
+# QUICK LINKS 🔗
+# --------------
+🌎 *Official Website*: https://agpt.co.
+📖 *User Guide*: https://docs.agpt.co.
+👩 *Contributors Wiki*: https://github.com/Significant-Gravitas/Auto-GPT/wiki/Contributing.
 
-# INCLUDED COMMAND 'send_tweet' IS DEPRICATED, AND WILL BE REMOVED IN THE NEXT STABLE RELEASE
-Base Twitter functionality (and more) is now covered by plugins: https://github.com/Significant-Gravitas/Auto-GPT-Plugins
+# v0.4.7 RELEASE HIGHLIGHTS! 🚀
+# -----------------------------
+This release introduces initial REST API support, powered by e2b's agent 
+protocol SDK (https://github.com/e2b-dev/agent-protocol#sdk). 
 
-## Changes to Docker configuration
-The workdir has been changed from /home/appuser to /app. Be sure to update any volume mounts accordingly.
+It also includes improvements to prompt generation and support 
+for our new benchmarking tool, Auto-GPT-Benchmarks
+(https://github.com/Significant-Gravitas/Auto-GPT-Benchmarks).
 
+We've also moved our documentation to Material Theme, at https://docs.agpt.co.
+
+As usual, we've squashed a few bugs and made some under-the-hood improvements.
+
+Take a look at the Release Notes on Github for the full changelog:
+https://github.com/Significant-Gravitas/Auto-GPT/releases.

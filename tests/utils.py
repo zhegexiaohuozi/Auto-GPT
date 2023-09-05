@@ -1,23 +1,6 @@
-import functools
 import os
 
 import pytest
-
-
-def requires_api_key(env_var):
-    def decorator(func):
-        @functools.wraps(func)
-        def wrapper(*args, **kwargs):
-            if not os.environ.get(env_var):
-                pytest.skip(
-                    f"Environment variable '{env_var}' is not set, skipping the test."
-                )
-            else:
-                return func(*args, **kwargs)
-
-        return wrapper
-
-    return decorator
 
 
 def skip_in_ci(test_function):
@@ -25,3 +8,7 @@ def skip_in_ci(test_function):
         os.environ.get("CI") == "true",
         reason="This test doesn't work on GitHub Actions.",
     )(test_function)
+
+
+def get_workspace_file_path(workspace, file_name):
+    return str(workspace.get_path(file_name))
